@@ -1,0 +1,53 @@
+<app-header></app-header>
+<div class="update-Graviance">
+     <h1>Update Your Graviance Details</h1>
+    <p class="message-p">{{GrievanceMessage}}</p>
+    <form #updategrievances="ngForm"
+    (ngSubmit)="submit(updategrievances.value)"
+     class="common-form">
+      <input
+        type="text"
+        class="form-input"
+        placeholder="Your Name"
+        name="name"
+        [ngModel]="userData?.name"
+      />
+      <input
+        type="text"
+        class="form-input"
+        placeholder="Type Of Grievances"
+        name="hgstypes"
+        ngModel="{{userData?.hgstypes}}"
+      />
+      <input
+      type="text"
+      class="form-input"
+      placeholder="Your Room Number"
+      name="room"
+      ngModel="{{userData?.room}}"
+    />
+    <input
+    type="text"
+    class="form-input"
+    placeholder="Your Course"
+    name="course"
+    ngModel="{{userData?.course}}"
+  />
+  <input
+  type="text"
+  class="form-input"
+  placeholder="Your Mobile Number"
+  name="mobile"
+  ngModel="{{userData?.mobile}}"
+  />
+  <textarea
+  type="text"
+  class="form-input"
+  placeholder="Grievance Description"
+  name="description"
+  ngModel="{{userData?.description}}"
+  ></textarea>
+  <button class="form-button">Update Graviance</button>
+  
+    </form>
+  </div>

@@ -1,0 +1,75 @@
+<app-header></app-header>
+<div class="container-fluid">
+    <div class="navbar2 mt-4">
+        <div>
+            <h2 class="displayitems">Grievance List</h2>
+        </div>
+        
+         <!--<mat-form-field class="filter">
+            <mat-label>Filter</mat-label>
+            <input matInput (keyup)="applyFilter($event)" placeholder="Search Here...." #input>
+        </mat-form-field>-->
+    </div> 
+    <p class="message-p">{{GrievanceMessage}}</p>
+    <!-- table declare -->
+    <div class="tablex mat-elevation-z8">
+        <table mat-table [dataSource]="grievanceList" matSort>
+            <!-- id column -->
+            <ng-container matColumnDef="id">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Id </th>
+                <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+            </ng-container>
+            <!-- name column -->
+            <ng-container matColumnDef="name">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+                <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+            </ng-container>
+            <!-- country column -->
+            <ng-container matColumnDef="hgstypes">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header > Grievance Types</th>
+                <td mat-cell *matCellDef="let element"> {{element.hgstypes}} </td>
+            </ng-container>
+            <!-- logo column -->
+            <ng-container matColumnDef="room">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Room No </th>
+                <td mat-cell *matCellDef="let element"> {{element.room}} </td>
+            </ng-container>
+            <!-- slogan column -->
+            <ng-container matColumnDef="course">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header > Course </th>
+                <td mat-cell *matCellDef="let element"> {{element.course}} </td>
+            </ng-container>
+            <!-- mobile column -->
+            <ng-container matColumnDef="mobile">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header > Mobile No </th>
+                <td mat-cell *matCellDef="let element"> {{element.mobile}} </td>
+            </ng-container>
+            <!-- description column-->
+            <ng-container matColumnDef="description">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header > Description </th>
+                <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+            </ng-container>
+            <ng-container matColumnDef="actions">
+                <th mat-header-cell *matHeaderCellDef> Actions </th>
+                <td mat-cell *matCellDef="let row">
+                  <button mat-icon-button [matMenuTriggerFor]="menu">
+                    <mat-icon>more_vert</mat-icon>
+                  </button>
+                  <mat-menu #menu="matMenu">
+                    <button mat-menu-item [routerLink]="['/updateList', row.id]">
+                        <i class="fa fa-pencil m-r-5"></i>Edit
+                      </button>
+                    <button mat-menu-item (click)="deleteUser(row.id)"><i class="fa-regular fa-trash-can m-r-5"></i>Delete</button>
+                  </mat-menu>
+                </td>
+              </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+    </div>
+    <!-- paginator declare-->
+    <div class="pages">
+        <mat-paginator [pageSizeOptions]="[8,20,50,100]" aria-label="Select page of users"></mat-paginator>
+    </div>
+</div>

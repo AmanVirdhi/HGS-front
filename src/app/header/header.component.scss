@@ -1,0 +1,92 @@
+.nav {
+    background-color: #2c3e50; /* Dark background for modern look */
+    padding: 0rem 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  }
+
+  .page-buttons{
+margin-left: 50vw;
+padding-top: 0.7rem;
+  }
+
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-title {
+    color: #ecf0f1; /* Light color for better contrast */
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  .nav-title a {
+    color: #ecf0f1; /* Set a color that matches the navbar text */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.nav-title a:hover {
+    color: #3498db; /* Change color on hover */
+}
+
+  .nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 1.5rem; /* Space between links */
+    margin: 0;
+  }
+
+  .nav-link {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+
+  .nav-link:hover {
+    color: #3498db; /* Blue color on hover */
+  }
+
+  .nav-link:active {
+    color: #2980b9; /* Darker blue when active */
+  }
+
+  .logout-button {
+    background-color: #e74c3c; /* Red background for Logout */
+    color: #ecf0f1; /* Light text color */
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logout-button:hover {
+    background-color: #c0392b; /* Darker red on hover */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Slight shadow on hover */
+}
+
+.logout-button:active {
+    background-color: #a93226; /* Even darker red when clicked */
+    box-shadow: none; /* Remove shadow when active */
+}
+.button-style {
+  display: inline-block; /* Makes it behave like a button */
+  padding: 8px 15px; /* Adjusts padding for a button-like appearance */
+  background-color: #007bff; /* Button background color */
+  color: white; /* Text color */
+  text-align: center; /* Center the text */
+  text-decoration: none; /* Remove underline */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+  margin-right: 8px;
+}
+
+.button-style:hover {
+  background-color: #0056b3; /* Darker color on hover */
+}
+.welcome{
+  color: white;
+}

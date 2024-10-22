@@ -1,0 +1,30 @@
+.common-form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: auto;
+}
+
+.form-input {
+    height: 35px;
+    margin-bottom: 20px;
+    border: 1px solid blueviolet;
+    padding-left: 15px;
+    color: blueviolet;
+}
+
+.form-button {
+    height: 35px;
+    border: 1px solid blueviolet;
+    color: blueviolet;
+    cursor: pointer;
+}
+
+.update-Graviance {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.message-p {
+    color: green;
+}

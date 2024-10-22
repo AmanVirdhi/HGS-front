@@ -1,0 +1,60 @@
+<app-header></app-header>
+<div class="add-Graviance">
+    <h1>Enter Your Grievance Details</h1>
+    
+    <!-- Display the message here -->
+    <p class="message-p">{{ addGrievanceMessage }}</p>
+    
+    <form #addgrievances="ngForm" (ngSubmit)="submit(addgrievances.value, addgrievances)" class="common-form">
+      <input
+        type="text"
+        class="form-input"
+        placeholder="Enter Your Name"
+        name="name"
+        ngModel
+        required
+      />
+      <input
+        type="text"
+        class="form-input"
+        placeholder="Enter Type Of Grievances"
+        name="hgstypes"
+        ngModel
+        required
+      />
+      <input
+        type="text"
+        class="form-input"
+        placeholder="Enter Your Room Number"
+        name="room"
+        ngModel
+        required
+      />
+      <input
+        type="text"
+        class="form-input"
+        placeholder="Enter Your Course"
+        name="course"
+        ngModel
+        required
+      />
+      <input
+        type="text"
+        class="form-input"
+        placeholder="Enter Your Mobile Number"
+        name="mobile"
+        ngModel
+        required
+        pattern="^[0-9]{10}$" 
+      />
+      <textarea
+        class="form-input"
+        placeholder="Enter Grievance Description"
+        name="description"
+        ngModel
+        required
+      ></textarea>
+      
+      <button class="form-button">Add Grievance</button>
+    </form>
+</div>

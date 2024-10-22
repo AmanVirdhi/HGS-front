@@ -1,0 +1,16 @@
+<nav class="nav">
+    <div class="nav-container">
+      <h1 class="nav-title"><a routerLink="">Hostel Grievance System</a></h1>
+      <div class="page-buttons">
+        <ul *ngIf="showLogoutButton">
+            <a routerLink="/types" class="button-style">Add Grievance</a>
+            <a routerLink="/grievanceList" class="button-style">Grievance List</a>
+            <button class="logout-button" aria-label="Logout" (click)="Logout()" style="margin-right: 50px;">Logout</button>
+        </ul>
+        <ul *ngIf="!showLogoutButton">
+             <p class="welcome" style="size: 2px;">Welcome, Guest</p>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
